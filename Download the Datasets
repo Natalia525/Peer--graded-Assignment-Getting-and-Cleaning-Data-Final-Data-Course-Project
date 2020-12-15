@@ -1,0 +1,13 @@
+fname<-"Coursera_DS3_Final.zip"
+> 
+## If archive exist...
+> if (!file.exists(fname)){
++     fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
++     download.file(fileURL, fname, method="curl")}
+
+## If folder exist...
+if (!file.exists("UCI HAR Dataset")) { unzip(fname)}
+
+
+
+
